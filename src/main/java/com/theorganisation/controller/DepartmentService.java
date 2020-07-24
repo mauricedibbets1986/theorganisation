@@ -52,12 +52,6 @@ public class DepartmentService {
 		return departmentrepository.save(department);
 	}
 
-	public Department addEmployee(long departmentid, long employeeid) {
-		Department department  = departmentrepository.findById(departmentid).get();
-		Employee employee = employeerepository.findById(employeeid).get();
-		department.addEmployees(employee);
-		System.out.println("employee added to department in database");
-		return departmentrepository.save(department);
-	}
+
 	
 }
