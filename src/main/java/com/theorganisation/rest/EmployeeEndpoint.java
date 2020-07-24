@@ -29,21 +29,5 @@ public class EmployeeEndpoint {
 	public Iterable<Employee> getEmployees() {
 		return employeeService.getAllEmployees();
 	}
-
-	@PutMapping("/id/{id}")
-	public Employee updateEmployee(@PathVariable(value = "id") long id, @RequestBody Employee employee) {
-		return employeeService.updateEmployee(employee, id);
-	}
-	
-	@PutMapping("/telefoon/{employeeId}/{telefoonId}")
-	public Employee updateEmployeeTelefoon(@PathVariable(value = "employeeId") long employeeId, 
-	@PathVariable(value = "telefoonId") long telefoonId) {
-		return employeeService.updateEmployeeTelefoon(employeeId, telefoonId);
-	}
-	
-	@DeleteMapping("/id/{id}")
-	public void deleteEmployee(@PathVariable(value = "id") long employeeId) {
-		employeeService.deleteEmployee(employeeId);
-	}
 	
 }

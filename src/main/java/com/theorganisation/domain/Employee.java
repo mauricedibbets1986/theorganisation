@@ -26,17 +26,6 @@ public class Employee {
 	private String name;
 	private double salary;
 	
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(
-			name="the_messages",
-			joinColumns = @JoinColumn(name = "employee_id"),
-			inverseJoinColumns = @ JoinColumn(name = "messages_id"))
-	private List<Message> messages = new ArrayList<>();
-	
-	@OneToOne
-	@JoinColumn( name = "telefoon_id" )
-	private Telefoon telefoon;
-	
 	public long getId() {
 		return id;
 	}
@@ -54,22 +43,6 @@ public class Employee {
 	}
 	public void setSalary(double salary) {
 		this.salary = salary;
-	}
-	public List<Message> getMessages() {
-		return messages;
-	}
-	public void setMessages(List<Message> messages) {
-		this.messages = messages;
-	}
-	
-	public void addMessage(Message message) {
-		this.messages.add(message);
-	}
-	public Telefoon getTelefoon() {
-		return telefoon;
-	}
-	public void setTelefoon(Telefoon telefoon) {
-		this.telefoon = telefoon;
 	}
 
 	

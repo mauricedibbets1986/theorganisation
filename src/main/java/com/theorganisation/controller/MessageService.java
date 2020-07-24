@@ -11,7 +11,7 @@ import com.theorganisation.domain.*;
 public class MessageService {
 
 	@Autowired
-	MessageRepository<Message> messagerepository;
+	MessageRepository messagerepository;
 	
 	public Message addMessage(Message message) {
 		System.out.println("Message toegevoegd aan database");

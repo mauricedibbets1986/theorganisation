@@ -10,7 +10,7 @@ import com.theorganisation.domain.*;
 @Transactional
 public class TelefoonService {
 	@Autowired
-	TelefoonRepository<Telefoon> telefoonrepository;
+	TelefoonRepository telefoonrepository;
 	
 	public Telefoon addTelefoon(Telefoon telefoon) {
 		System.out.println("Telefoon toegevoegd aan database");
