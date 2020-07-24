@@ -14,9 +14,7 @@ import com.theorganisation.domain.*;
 public class DepartmentService {
 	
 	@Autowired
-	DepartmentRepository<Department> departmentrepository;
-	@Autowired
-	EmployeeRepository<Employee> employeerepository;
+	DepartmentRepository departmentrepository;
 	
 	public Department addDepartment(Department department) {
 		System.out.println("department toegevoegd aan database");
@@ -32,26 +30,5 @@ public class DepartmentService {
 		System.out.println("inzien department gevonden met id");
 		return departmentrepository.findById(id).get();
 	}
-
-	public List<Department> getByName(String name) {
-		System.out.println("Inzien department gevonden met name");
-		return departmentrepository.findByName(name);
-	}
-
-	public void deleteDepartmentById(long id) {
-		System.out.println("Department verwijderd dmv id");
-		departmentrepository.deleteById(id);
-	}
-
-	public Department updateDepartment(long id, Department departmentdetails) {
-		Department department = departmentrepository.findById(id).get();
-		if (departmentdetails.getName() != null && departmentdetails.getName() != "") {
-			department.setName(departmentdetails.getName());
-		}
-		System.out.println("Department gevonden met id en aangepast");
-		return departmentrepository.save(department);
-	}
-
-
 	
 }

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.theorganisation.domain.*;
 
 @Repository
-public interface EmployeeRepository<T extends Employee> extends CrudRepository<T, Long> {
+public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
 }

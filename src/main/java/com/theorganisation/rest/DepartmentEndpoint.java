@@ -37,24 +37,4 @@ public class DepartmentEndpoint {
 		return departmentservice.getById(id);
 	}
 	
-	@GetMapping("/name/{name}")
-	public List<Department> getDepartmentByName(@PathVariable(value = "name") String name) {
-		return departmentservice.getByName(name);
-	}
-	
-	@DeleteMapping("/id/{id}")
-	public void deleteDepartment(@PathVariable(value = "id") long id) {
-		departmentservice.deleteDepartmentById(id);
-	}
-	
-	@PutMapping("/id/{id}")
-	public Department updateDepartment(@PathVariable(value = "id") long id, @RequestBody Department departmentdetails) {
-		return departmentservice.updateDepartment(id, departmentdetails);
-	}
-	
-	@PutMapping("/addemployee/{departmentid}/{employeeid}")
-	public Department addEmployeeToDepartment(@PathVariable(value = "departmentid") long departmentid, @PathVariable(value = "employeeid") long employeeid) {
-		return departmentservice.addEmployee(departmentid, employeeid);
-	}
-	
 }

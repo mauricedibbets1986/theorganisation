@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.theorganisation.domain.*;
 
 @Repository
-public interface DepartmentRepository<T extends Department> extends CrudRepository<T, Long> {
-	List<T> findByName(String name);
+public interface DepartmentRepository extends CrudRepository<Department, Long> {
+
 }

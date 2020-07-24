@@ -20,10 +20,6 @@ public class Telefoon {
 	
 	private String telefoonNummer;
 	
-	@OneToOne(mappedBy = "telefoon")
-	@JsonBackReference
-	private Employee employee;
-
 	public long getId() {
 		return id;
 	}
@@ -38,14 +34,6 @@ public class Telefoon {
 
 	public void setTelefoonNummer(String telefoonNummer) {
 		this.telefoonNummer = telefoonNummer;
-	}
-
-	public Employee getEmployee() {
-		return employee;
-	}
-
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
 	}
 	
 }

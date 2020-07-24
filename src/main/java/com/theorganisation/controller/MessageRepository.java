@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.theorganisation.domain.*;
 
 @Repository
-public interface MessageRepository<T extends Message> extends CrudRepository<T, Long> {
+public interface MessageRepository extends CrudRepository<Message, Long> {
 
 }
